@@ -1,10 +1,12 @@
 import asyncio
 import discord
+import os
 
 client = discord.Client()
 
+access_token = os.environ[BOT_TOKEN]
 # 복사해 둔 토큰을 your_token에 넣어줍니당
-token = "Nzk5MDk2Mzg2MDAzMDA5NTg2.X_-mgA.FkIr0UQSwtsVbl91nV4Y6WHryNo"
+token = "Nzk5MDk2Mzg2MDAzMDA5NTg2.X_-mgA.LS3k-qC5m417PJ93r08oolLEnp0"
 
 # 봇이 구동되었을 때 동작되는 코드
 @client.event
@@ -44,5 +46,5 @@ async def on_message(message):
         channel = message.channel
         await channel.send('그 기능은 아직 개발 중이에요!')
 
-client.run(token)
+client.run(access_token)
 #[출처] 파이썬으로 디스코드 봇 만들기_02.간단 코드 만들기|작성자 잠냥
